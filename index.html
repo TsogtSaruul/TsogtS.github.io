@@ -1,275 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Dashboard using HTML, CSS and Javascript</title>
-
-    <!-------------------------------------MATERIAL CDN----------------------------------------->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    
-    <!---------------------------------------STYLESHEET---------------------------------------->
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon-16x16.png">
+    <title>СУМАН ШОНХОР</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="swiper.css">
 </head>
+
 <body>
-    <div class="container">
-        <aside>
-            <div class="top">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="logo">
-                    <h2>EGA<span class="danger">TOR</span></h2>
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">close</span>
-                </div>
-            </div>
 
-            <div class="sidebar">   
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">person_outline</span>
-                    <h3>Customers</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
-                    <h3>Orders</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messages</h3>
-                    <span class="message-count">26</span>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">inventory</span>
-                    <h3>Products</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">report_gmailerrorred</span>
-                    <h3>Reports</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">add</span>
-                    <h3>Add Product</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
-        <!------------------------ END OF ASIDE -------------------->
-        <main>
-            <h1>Dashboard</h1>
-            <div class="date">
-                <input type="date">
-            </div>
+    <!-------------------- tobBar -------------------->
+    <div class="topBar">
+        <a href="#home" class="topBar-left">
+            <b>СУМАН</b> ШОНХОР
+        </a>
 
-            <div class="insights">
-                <div class="sales">
-                    <span class="material-icons-sharp">analytics</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,024</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!--------------------------------- END OF SALES ------------------------------>
-                <div class="expenses">
-                    <span class="material-icons-sharp">bar_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Expenses</h3>
-                            <h1>$14,160</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>62%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!--------------------------------- END OF EXPENSES ------------------------------>
-                <div class="income">
-                    <span class="material-icons-sharp">stacked_line_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Income</h3>
-                            <h1>$10,864</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>44%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!--------------------------------- END OF INCOME ------------------------------>
-            </div>
-            <!-------------------------------- END OF INSIGHTS ------------------------------------>
+        <div class="topBar-right">
+            <a href="#about" class="topBar-item">
+                БИДНИЙ ТУХАЙ
+            </a>
+            <a href="#services" class="topBar-item">
+                ҮЙЛЧИЛГЭЭ
+            </a>
+            <a href="#subscription" class="topBar-item">
+                БҮРТГҮҮЛЭХ
+            </a>
+            <a href="#dashboard" class="topBar-item">
+                ХЯНАХ САМБАР
+            </a>
+            <a href="#contact" class="topBar-item">
+                ХОЛБОО БАРИХ
+            </a>
+        </div>
 
-            <div class="recent-orders">
-                <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Product Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr> -->
-                    </tbody>
-                </table>
-                <a href="#">Show All</a>
-            </div>
-        </main>
-        <!------------------------------ END OF MAIN ----------------------------------->
+        <!-- <div>
+            <span 
+                class="button xxlarge white right hide-small" 
+                onclick="open()">
+                <i class="fa fa-bars"></i>
+            </span> 
+        </div> -->
+    </div>
 
-        <div class="right">
-            <div class="top">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Daniel</b></p>
-                        <small class="text-muted">Admin</small>
+    <!-- <nav 
+        class="sidebar black animate-top xxlarge" 
+        style="display:none; padding-top:150px; z-index: 3;" 
+        id="mySidebar">
+        <a 
+            href="javascript:void(0)" 
+            onclick="close()" 
+            class="button black xxlarge padding display-topright" 
+            style="padding:6px 24px">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="bar-block center">
+            <a 
+                href="#about" 
+                class="bar-item button text-grey hover-black">
+                Бидний тухай
+            </a>
+            <a 
+                href="#services" 
+                class="bar-item button text-grey hover-black">
+                Үйлчилгээ
+            </a>
+            <a 
+                href="#subscription" 
+                class="bar-item button text-grey hover-black">
+                Бүртгүүлэх
+            </a>
+            <a 
+                href="#dashboard" 
+                class="bar-item button text-grey hover-black">
+                Хянах самбар
+            </a>
+            <a 
+                href="#contact" 
+                class="bar-item button text-grey hover-black">
+                Холбоо барих
+            </a>
+        </div>
+    </nav> -->
+
+    <!-------------------- Header -------------------->
+    <header class="header" id="home">
+        <img 
+            class="image" 
+            src="./assets/toyota_prius_large.png" 
+            alt="Image of a toyota" 
+            width="1500" 
+            height="800"
+        >
+        <div class="header-content">
+            <img 
+                src="./assets/Logo_Shonkhor.png" 
+                alt="Logo" 
+            >
+            <h1>
+                <span>
+                    <b>СУМАН</b> ШОНХОР
+                </span> 
+            </h1>
+        </div>
+    </header>
+
+    <!-------------------- Content -------------------->
+    <div class="content">
+
+        <!-- About Section -->
+        <div class="about" id="about">
+            <h3>
+                БИДНИЙ ТУХАЙ
+            </h3>
+            <p>
+                Манай компани 2018 онд мэдээллийн технологийн менежментийн зөвлөгөө өгөх, зар сурталчилгаа, зах зээл идэвхижүүлэлтийн чиглэлээр үйл ажиллагагаа явуулахаар үүсгэн байгуулагдсан. Одоогийн байдлаар такси үйлчилгээний дуудлагын платформ, нийтийн тээврийн төлбөрийн систем, царай таних хяналтын систем зэрэг өндөр технологийн програм хангамжуудыг дотооддоо хөгжүүлэн ажиллаж байна.
+            </p>
+        </div>
+
+        <div class="founder">
+            <div class="founder-1">
+                <img 
+                    src="./assets/image_1.jfif" 
+                    alt="John" 
+                    class="founder-1-image"
+                >
+                <h3 class="founder-1-name">НОМИН</h3>
+                <p class="founder-1-title">
+                    CEO & Үүсгэн байгуулагч
+                </p>
+                <p>
+                    <a class="founder-1-button" href="#contact">
+                        Холбоо барих
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="services" id="services">
+            <h3 class="title">
+                ҮЙЛЧИЛГЭЭ
+            </h3>
+        </div>
+
+        <div class="services-container">
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-title">
+                        <b>ТАКСИ</b>
                     </div>
-                    <div class="profile-photo">
-                        <img src="./images/profile-1.jpg" alt="Profile photo">
-                    </div>
+                    <img 
+                        src="./assets/car_1.jpg" 
+                        alt="Такси" 
+                        class="card-image"
+                    >
                 </div>
             </div>
-            <!------------- END OF TOP --------------->
-            <div class="recent-updates">
-                <h2>Recent Updates</h2>
-                <div class="updates">
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-2.jpg" alt="Profile photo">
-                        </div>
-                        <div class="message">
-                            <p><b>Mike Tyson</b> received his order of 
-                            Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-title">
+                        <b>ГАРААС ГАРТ</b>
                     </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-3.jpg" alt="Profile photo">
-                        </div>
-                        <div class="message">
-                            <p><b>Lucy Jane</b> received her order of 
-                            Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-4.jpg" alt="Profile photo">
-                        </div>
-                        <div class="message">
-                            <p><b>Liza Robins</b> received her order of 
-                            Night lion tech GPS drone.</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
+                    <img 
+                        src="./assets/car_2.jpg" 
+                        alt="Гараас гарт" 
+                        class="card-image"
+                    >
                 </div>
             </div>
-            <!-------------------- END OF RECENT UPDATES ---------------------->
-            <div class="sales-analytics">
-                <h2>Sales Analytics</h2>
-                <div class="item online">
-                    <div class="icon">
-                        <span class="material-icons-sharp">shopping_cart</span>
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-title">
+                        <b>ДУУДЛАГЫН ЖОЛООЧ</b>
                     </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>ONLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+39%</h5>
-                        <h3>3849</h3>
-                    </div>
+                    <img 
+                        src="./assets/car_3.jpg" 
+                        alt="Дуудлагын жолооч" 
+                        class="card-image"                    >
                 </div>
-                <div class="item offline">
-                    <div class="icon">
-                        <span class="material-icons-sharp">local_mall</span>
+            </div>
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-title">
+                        <b>ПОРТЕР</b>
                     </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>OFFLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="danger">-17%</h5>
-                        <h3>1100</h3>
-                    </div>
-                </div>
-                <div class="item customers">
-                    <div class="icon">
-                        <span class="material-icons-sharp">person</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>NEW CUSTOMERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+25%</h5>
-                        <h3>849</h3>
-                    </div>
-                </div>
-                <div class="item add-product">
-                    <span class="material-icons-sharp">add</span>
-                    <h3>Add Product</h3>
+                    <img 
+                        src="./assets/car_4.jpg" 
+                        alt="Портер" 
+                        class="card-image"
+                    >
                 </div>
             </div>
         </div>
+
+        <!-- Subscription -->
+        <div class="subscribe" id="subscription">
+            <h3 class="subscribe-title">
+                БҮРТГҮҮЛЭХ
+            </h3>
+        </div>
+
+        <div 
+            class="subscribe-container" 
+            id="home">
+            <img 
+                src="./assets/subscription.png" 
+                alt="Image of subscribe"
+            >
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <div class="dashboard" id="dashboard">
+            <h3 class="dashboard-title">
+                ХЯНАХ САМБАР
+            </h3>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_1.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_2.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_3.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_4.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_5.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_6.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_7.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_8.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="dashboard-container" >
+                    <img 
+                        src="./assets/dashboard_9.png" 
+                        alt="Image of a toyota" 
+                    >
+                </div>
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Contact Section -->
+
+        <div class="contact" id="contact">
+            <h3 class="contact-title">
+                ХОЛБОО БАРИХ
+            </h3>
+            <p>
+                Бидэнтэй холбоо барихыг хүсвэл дараах хүснэгтийг бөглөөд илгээх товчлуурыг дарна уу.
+            </p>
+            <form action="/action_page.php" target="_blank">
+                <input class="input" type="text" placeholder="Нэр" required name="Name">
+                <input class="input" type="text" placeholder="И-мэйл хаяг" required name="Email">
+                <input class="input" type="text" placeholder="Гарчиг" required name="Subject">
+                <input class="input" type="text" placeholder="Коммент" required name="Comment">
+                <button class="button-submit" type="submit">
+                    <i class="fa fa-paper-plane"></i> МЕССЕЖ ИЛГЭЭХ
+                </button>
+            </form>
+        </div>
+        <!-- End page content -->
     </div>
 
-    <script src="./orders.js"></script>
-    <script src="./index.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p> ЗОХИОГЧИЙН ЭРХ 
+            <a 
+                href="https://www.w3schools.com/w3css/default.asp" 
+                title="W3.CSS" 
+                target="_blank">
+                &copy; СУМАН ШОНХОР  
+            </a>
+        </p>
+    </footer>
+
+
+
+    <script>  
+        // Open and close sidebar
+        function open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        
+        function close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+    <script src="swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
 </body>
+
 </html>
